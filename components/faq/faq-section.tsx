@@ -61,7 +61,7 @@ export function FAQSection() {
         className="max-w-4xl mx-auto"
       >
         <Tabs defaultValue="general" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto mb-8 bg-black border-4 border-black">
+          <TabsList className="grid w-full grid-cols-4 max-w-3xl mx-auto mb-8 bg-black border-4 border-black">
             {Object.entries(categoryLabels).map(([key, label]) => {
               const Icon = categoryIcons[key as keyof typeof categoryIcons]
               return (

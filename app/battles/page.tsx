@@ -31,11 +31,11 @@ export default function BattlesPage() {
         >
           <div className="flex items-center gap-3 mb-4">
             <Swords className="h-10 w-10 text-yellow-400" />
-            <h1 className="text-5xl font-black uppercase bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-black uppercase bg-black bg-clip-text text-transparent">
               MEME ARENA BATTLES
             </h1>
           </div>
-          <p className="text-xl font-bold text-gray-300">
+          <p className="text-xl font-bold text-gray-600">
             WHERE MEMES FIGHT FOR VIRAL DOMINANCE
           </p>
         </motion.div>

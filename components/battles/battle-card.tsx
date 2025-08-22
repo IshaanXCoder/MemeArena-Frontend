@@ -66,8 +66,8 @@ export function BattleCard({ battle }: BattleCardProps) {
       </div>
 
       {/* Prize Pool */}
-      <div className="text-center p-3 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-lg border border-yellow-500/30">
-        <div className="text-2xl font-black text-yellow-400">
+      <div className="text-center p-3 bg-beige rounded-lg border border-yellow-500/30">
+        <div className="text-2xl font-black text-black">
           {battle.totalPrize} ETH
         </div>
         <div className="text-xs font-bold text-gray-400 uppercase">
@@ -112,7 +112,7 @@ export function BattleCard({ battle }: BattleCardProps) {
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
               <div
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full"
+                className="bg-teal h-2 rounded-full"
                 style={{ width: `${meme1Percentage}%` }}
               />
             </div>
@@ -166,7 +166,7 @@ export function BattleCard({ battle }: BattleCardProps) {
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
               <div
-                className="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full"
+                className="bg-teal h-2 rounded-full"
                 style={{ width: `${meme2Percentage}%` }}
               />
             </div>

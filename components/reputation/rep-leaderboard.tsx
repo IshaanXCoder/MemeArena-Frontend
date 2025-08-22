@@ -95,7 +95,7 @@ export function RepLeaderboard() {
       {/* Header with timeframe filter */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h2 className="text-2xl font-black uppercase text-yellow-400 mb-2">
+          <h2 className="text-2xl font-black uppercase text-black mb-2">
             REPUTATION LEADERBOARD
           </h2>
           <p className="text-gray-400 font-bold">
@@ -235,10 +235,10 @@ export function RepLeaderboard() {
                 <div
                   className={`h-2 rounded-full bg-gradient-to-r ${
                     user.tier === "Oracle" 
-                      ? "from-purple-400 to-purple-600" 
+                      ? "bg-purple-400" 
                       : user.tier === "Influencer"
-                      ? "from-yellow-400 to-orange-500"
-                      : "from-green-400 to-blue-500"
+                      ? "bg-yellow-400"
+                      : "bg-green-400"
                   }`}
                   style={{ width: `${Math.min((user.repScore / 10000) * 100, 100)}%` }}
                 />

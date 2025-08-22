@@ -15,7 +15,7 @@ export default function UploadPage() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <Target className="h-12 w-12 text-yellow-400" />
-            <h1 className="text-5xl font-black uppercase bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-black uppercase bg-black bg-clip-text text-transparent">
               SUBMIT YOUR MEME
             </h1>
           </div>
