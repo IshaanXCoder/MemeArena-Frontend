@@ -103,6 +103,7 @@ export function HeroSection() {
           >
             
             
+            
             <Link
               href="/upload"
               className="group px-8 py-4 border-2 border-yellow-400 text-white font-bold text-lg uppercase tracking-wider rounded-retro transition-all hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] font-retro bg-black/20 backdrop-blur-sm"
