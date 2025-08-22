@@ -1,7 +1,7 @@
 "use client"
 
 // Stub hook for NFT contract functionality
-export function useNftContract() {
+export function useNFTContract() {
   return {
     nfts: [],
     isLoading: false,

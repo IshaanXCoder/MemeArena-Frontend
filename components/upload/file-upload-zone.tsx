@@ -43,7 +43,7 @@ export function FileUploadZone({ file, preview, onFileSelect, onFileRemove }: Fi
 
   return (
     <div
-      className={`upload-zone ${dragActive ? "active" : ""} p-12 text-center transition-all`}
+      className={`upload-zone ${dragActive ? "active" : ""} p-12 text-center transition-all relative`}
       onDragEnter={handleDrag}
       onDragLeave={handleDrag}
       onDragOver={handleDrag}
@@ -68,7 +68,7 @@ export function FileUploadZone({ file, preview, onFileSelect, onFileRemove }: Fi
           </Button>
         </div>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-6 relative">
           <div className="mx-auto h-20 w-20 bg-black text-green-400 flex items-center justify-center retro-border">
             <Upload className="h-10 w-10" />
           </div>
@@ -81,6 +81,7 @@ export function FileUploadZone({ file, preview, onFileSelect, onFileRemove }: Fi
             accept="image/*"
             onChange={(e) => e.target.files?.[0] && handleFile(e.target.files[0])}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            style={{ zIndex: 1 }}
           />
         </div>
       )}
