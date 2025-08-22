@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import retro fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono:wght@400&display=swap');
+
+body {
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+  background: linear-gradient(135deg, #F5E8D3 0%, #E8D5B7 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .retro-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+  .retro-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #fbbf24, #f59e0b, #fbbf24) 1;
+  }
+  .retro-scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
+
+@layer base {
+  :root {
+    /* New warm color theme */
+    --background: 41 44% 89%; /* Warm Beige background */
+    --foreground: 0 0% 23%; /* Charcoal Gray text */
+    --card: 41 44% 89%; /* Warm Beige cards */
+    --card-foreground: 0 0% 23%; /* Charcoal Gray text on cards */
+    --popover: 41 44% 89%; /* Warm Beige popovers */
+    --popover-foreground: 0 0% 23%; /* Charcoal Gray text on popovers */
+    --primary: 173 32% 44%; /* Muted Teal primary */
+    --primary-foreground: 41 44% 89%; /* Warm Beige text on teal */
+    --secondary: 16 71% 54%; /* Burnt Orange secondary */
+    --secondary-foreground: 41 44% 89%; /* Warm Beige text on orange */
+    --muted: 41 44% 85%; /* Lighter Beige for muted elements */
+    --muted-foreground: 0 0% 35%; /* Darker gray for muted text */
+    --accent: 49 100% 44%; /* Mustard Yellow accent */
+    --accent-foreground: 0 0% 23%; /* Charcoal Gray text on yellow */
+    --destructive: 0 84.2% 60.2%; /* Keep red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* White text on red */
+    --border: 173 32% 44%; /* Muted Teal borders */
+    --input: 41 44% 85%; /* Light Beige inputs */
+    --ring: 49 100% 44%; /* Mustard Yellow focus rings */
+    --chart-1: 173 32% 44%; /* Muted Teal charts */
+    --chart-2: 49 100% 44%; /* Mustard Yellow charts */
+    --chart-3: 16 71% 54%; /* Burnt Orange charts */
+    --chart-4: 0 0% 23%; /* Charcoal Gray charts */
+    --chart-5: 41 44% 89%; /* Warm Beige charts */
+    --radius: 0.5rem; /* Rounded corners */
+    --sidebar-background: 173 32% 44%; /* Muted Teal sidebar */
+    --sidebar-foreground: 41 44% 89%; /* Warm Beige sidebar text */
+    --sidebar-primary: 49 100% 44%; /* Mustard Yellow sidebar primary */
+    --sidebar-primary-foreground: 0 0% 23%; /* Charcoal Gray text on yellow */
+    --sidebar-accent: 16 71% 54%; /* Burnt Orange sidebar accent */
+    --sidebar-accent-foreground: 41 44% 89%; /* Warm Beige text on orange */
+    --sidebar-border: 173 32% 44%; /* Muted Teal sidebar borders */
+    --sidebar-ring: 49 100% 44%; /* Mustard Yellow sidebar rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    background: transparent; /* Let the bg.jpg show through */
+  }
+}
+
+/* Retro Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px #fbbf24, 0 0 11px #fbbf24, 0 0 19px #fbbf24;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes neon {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.retro-animation {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.retro-flicker {
+  animation: flicker 3s linear infinite;
+}
+
+.retro-neon {
+  animation: neon 2s linear infinite;
+}
+
+.retro-scan {
+  animation: scan 2s linear infinite;
+}
