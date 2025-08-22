@@ -61,7 +61,7 @@ export function HeroSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-7xl md:text-9xl font-black text-white leading-tight font-retro  drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]">
+            <h1 className="text-5xl md:text-8xl font-black text-white leading-tight font-retro  drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]">
               MEMEARENA
             </h1>
             <p className="text-2xl md:text-3xl font-bold text-yellow-400 uppercase tracking-widest font-retro drop-shadow-[0_0_8px_rgba(0,0,0,0.6)]">
@@ -103,7 +103,7 @@ export function HeroSection() {
           >
             
             
-            
+
             <Link
               href="/upload"
               className="group px-8 py-4 border-2 border-yellow-400 text-white font-bold text-lg uppercase tracking-wider rounded-retro transition-all hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] font-retro bg-black/20 backdrop-blur-sm"
